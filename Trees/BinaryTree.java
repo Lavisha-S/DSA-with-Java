@@ -42,5 +42,38 @@ if(right){
     node.right=new Node(value);
     populate(scanner,node.right);
 }
+
+
+}
+public void display(){
+    display(root,"");
+
+}
+private void display(Node node,String indent){
+    if(node==null){
+        return;
+    }
+    System.out.println(indent + node.value);
+    display(node.left,indent + "\t");
+    display(node.right,indent + "\t");
+
+}
+private void prettyDisplay(Node node,int level){
+    if(node==null){
+        return;
+    }
+    prettyDisplay(node.right,level+1);
+    if(level!=0){
+        for(int i=0;i<level-1;i++){
+            System.out.print("|\t\t");
+
+        }
+        System.out.println("|-------->");
+
+    }else{
+        System.out.println(node.value);
+
+    }
+    prettyDisplay(node.left,level + 1);
 }
 }
