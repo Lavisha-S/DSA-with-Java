@@ -22,5 +22,7 @@ public void populate(Scanner scanner){
     populate(scanner,root);
 
 }
-private
+private void populate(Scanner scanner,Node node){
+    
+}
 }
