@@ -12,6 +12,29 @@ public int getValue(){
 }
     }
 private Node root;
+public BST(){
 
+}
+public int height(Node node){
+if(node==null){
+    return -1;
+}    
+return node.height;
+}
+public boolean isEmpty(){
+    return root==null;
+}
+public void display(){
+    display(root,"Root Node:");
+}
+private void display(Node node,String details){
+    if(node==null){
+        return;
+    }
+    System.out.println(details + node.getValue());
+    display(node.left,"left child of "+node.getValue() + ":");
+    display(node.right,"right child of" +node.getValue()+":");
+    
+}
 }
 
